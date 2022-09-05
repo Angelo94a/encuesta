@@ -1,0 +1,116 @@
+@use 'contenedor';
+@use 'colors' as *;
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: $lightgrey;
+}
+
+.hero {
+	&__secction {
+		width: 40rem;
+		background-color: $white;
+		border-radius: 0.93rem;
+		padding: 1rem;
+		margin-bottom: 0.93rem;
+		display: flex;
+		flex-direction: column;
+	}
+	&__title {
+		text-align: center;
+		justify-content: center;
+	}
+	&__parrafo {
+		margin-bottom: 0.93rem;
+	}
+	&__link {
+		text-decoration: none;
+		color: $blue;
+		font-weight: 400;
+		transition: all 0.3s ease;
+		&:hover {
+			color: $info;
+			text-decoration: underline;
+			transition: all 0.3s ease;
+		}
+	}
+	&__parrafo,
+	&__parrafo-2 {
+		font-weight: 300;
+	}
+	&__list {
+		padding: 1rem;
+		font-weight: 300;
+	}
+}
+// form estilo pagina 1
+.form {
+	&__grupo {
+		width: 40rem;
+		margin: 0.93rem 0;
+		padding: 1rem;
+		border-radius: 0.93rem;
+		background-color: $white;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.25rem;
+	}
+	&__grupo-habitos {
+		width: 40rem;
+		margin: 0.93rem 0;
+		padding: 1rem;
+		border-radius: 0.93rem;
+		background-color: $white;
+	}
+	&__subgrupo {
+		display: flex;
+		flex-direction: column;
+		font-weight: 300;
+	}
+	input[type='text'],
+	input[type='email'] {
+		padding: 0.62rem;
+		height: 2.18rem;
+		font-weight: 300;
+		border: none;
+		background: none;
+		outline: none;
+		border-bottom: 2px solid $lightgrey;
+		transition: all 0.3s ease;
+		&:focus {
+			border-bottom: 2px solid $blue;
+			transition: all 0.3s ease;
+		}
+	}
+	input[type='radio'] {
+		margin-right: 0.31rem;
+	}
+	input[type='date'] {
+		width: 7.93rem;
+		height: 1.5rem;
+		border: none;
+		background: none;
+		outline: none;
+		border-bottom: 2px solid $lightgrey;
+		transition: all 0.3s ease;
+		&:focus {
+			border-bottom: 2px solid $blue;
+			transition: all 0.3s ease;
+		}
+	}
+	&__clear {
+		width: 10.31rem;
+		height: 2.68rem;
+		background: none;
+		border: none;
+		color: $lightgrey;
+		display: flex;
+		align-items: flex-end;
+	}
+	&__error {
+		color: $error;
+		margin: top 0.93rem;
+	}
+	&__subtitle {
+		grid-column: span 2;
+	}
+}
